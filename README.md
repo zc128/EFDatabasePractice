@@ -1,7 +1,6 @@
-# EFDatabasePractice
-Create display and admin pages
 CMP-1005 - 12906 - Advanced Web Development - 202101 - 001
 Create display and admin pages
+
 This assignment is worth 20% of your overall mark. Please send only the Github link for marking.
 
 This assignment is due: February 26th, 2021.
