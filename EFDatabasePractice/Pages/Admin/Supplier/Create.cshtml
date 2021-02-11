@@ -1,0 +1,75 @@
+﻿@page
+@model EFDatabasePractice.Pages.Admin.Supplier.SupplierCreateModel
+@{
+}
+<div class="create-form">
+    <form method="post">
+        <div>
+            <h4>Add New Supplier:</h4>
+            <label asp-for="Supplier.CompanyName"></label>
+            <input asp-for="Supplier.CompanyName" />
+            <span asp-Validation-for="Supplier.CompanyName"></span>
+        </div>
+        <div>
+            <label asp-for="Supplier.ContactName"></label>
+            <input asp-for="Supplier.ContactName" />
+            <span asp-Validation-for="Supplier.ContactName"></span>
+        </div>
+        <div>
+            <label asp-for="Supplier.ContactTitle"></label>
+            <input asp-for="Supplier.ContactTitle" />
+            <span asp-Validation-for="Supplier.ContactTitle"></span>
+        </div>
+        <div>
+            <label asp-for="Supplier.Address"></label>
+            <input asp-for="Supplier.Address" />
+            <span asp-Validation-for="Supplier.Address"></span>
+        </div>
+        <div>
+            <label asp-for="Supplier.City"></label>
+            <input asp-for="Supplier.City" />
+            <span asp-Validation-for="Supplier.City"></span>
+        </div>
+        <div>
+            <label asp-for="Supplier.Region"></label>
+            <input asp-for="Supplier.Region" />
+            <span asp-Validation-for="Supplier.Region"></span>
+        </div>
+        <div>
+            <label asp-for="Supplier.PostalCode"></label>
+            <input asp-for="Supplier.PostalCode" />
+            <span asp-Validation-for="Supplier.PostalCode"></span>
+        </div>
+        <div>
+            <label asp-for="Supplier.Country"></label>
+            <input asp-for="Supplier.Country" />
+            <span asp-Validation-for="Supplier.Country"></span>
+        </div>
+        <div>
+            <label asp-for="Supplier.Phone"></label>
+            <input asp-for="Supplier.Phone" />
+            <span asp-Validation-for="Supplier.Phone"></span>
+        </div>
+        <div>
+            <label asp-for="Supplier.Fax"></label>
+            <input asp-for="Supplier.Fax" />
+            <span asp-Validation-for="Supplier.Fax"></span>
+        </div>
+        <div>
+            <label asp-for="Supplier.HomePage"></label>
+            <input asp-for="Supplier.HomePage" />
+            <span asp-Validation-for="Supplier.HomePage"></span>
+        </div>
+        <div asp-Validation-summary="All"></div>
+        <input type="submit" value="Create Supplier">
+    </form>
+</div>
+
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

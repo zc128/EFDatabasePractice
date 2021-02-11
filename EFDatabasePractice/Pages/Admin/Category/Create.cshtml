@@ -1,0 +1,35 @@
+﻿@page
+@model EFDatabasePractice.Pages.Admin.Category.CategoryCreateModel
+@{
+}
+<div class="create-form">
+    <form method="post">
+        <div>
+            <h4>Add New Category:</h4>
+            <label asp-for="Category.Name"></label>
+            <input asp-for="Category.Name" />
+            <span asp-Validation-for="Category.Name"></span>
+        </div>
+        <div>
+            <label asp-for="Category.Description"></label>
+            <input asp-for="Category.Description" />
+            <span asp-Validation-for="Category.Description"></span>
+        </div>
+        <div>
+            <label asp-for="Category.Picture"></label>
+            <input asp-for="Category.Picture" />
+            <span asp-Validation-for="Category.Picture"></span>
+        </div>
+        <div asp-Validation-summary="All"></div>
+        <input type="submit" value="Create Category">
+    </form>
+</div>
+
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

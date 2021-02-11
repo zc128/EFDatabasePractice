@@ -1,0 +1,32 @@
+﻿@page "{ProductID?}"
+
+@model EFDatabasePractice.Pages.ProductModel
+@{
+}
+
+@if (Model.SelectedProduct != null)
+{
+<div id="ProductDetail">
+
+    <h4>Product Name: @Model.SelectedProduct.ProductName</h4>
+    <h5>ProductID: @Model.SelectedProduct.ProductID</h5>
+    <h5>CategoryID: @Model.SelectedProduct.CategoryID</h5>
+    <h5>SupplierID: @Model.SelectedProduct.SupplierID</h5>
+    <h5>Price: $@Model.SelectedProduct.UnitPrice CAD</h5>
+    <h5>Description: @Model.SelectedProduct.Category.Description</h5>
+    <h5>Supplier: @Model.SelectedProduct.Supplier.CompanyName</h5>
+    <h5>Quantity Per Label: @Model.SelectedProduct.QuantityPerLabel</h5>
+    <h5>Units in Stock: @Model.SelectedProduct.UnitsInStock</h5>
+    <h5>Units on Order: @Model.SelectedProduct.UnitsOnOrder</h5>
+    <h5>Reorder Level: @Model.SelectedProduct.ReorderLevel</h5>
+    <h5>Discontinued: @Model.SelectedProduct.Discontinued</h5>
+
+</div>
+}
+<footer>
+    <div id="DetailPageFooter">
+        <hr />
+        <p>Disclaimer:This Ecommerce website is for a school project and it's for educational purposes only.</p>
+    </div>
+</footer>
+

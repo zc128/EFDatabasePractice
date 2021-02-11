@@ -1,0 +1,67 @@
+﻿@page
+@model EFDatabasePractice.Pages.Admin.Product.ProductCreateModel
+@{
+}
+<div class="create-form">
+    <form method="post">
+        <div>
+            <h4>Add New Product:</h4>
+            <label asp-for="Product.ProductName"></label>
+            <input asp-for="Product.ProductName" />
+            <span asp-Validation-for="Product.ProductName"></span>
+        </div>
+        <h6>[CategoryId Selection: 4k->(Id:1) / HD->(Id:4) / QHD->(Id:2)]</h6>
+        <div>
+            <label asp-for="Product.CategoryID"></label>
+            <input asp-for="Product.CategoryID" />
+            <span asp-Validation-for="Product.CategoryID"></span>
+        </div>
+        <h6>[SupplierID Selection: LG->(Id:2) / Samsung->(Id:3) / Sony->(Id:4)]</h6>
+        <div>
+            <label asp-for="Product.SupplierID"></label>
+            <input asp-for="Product.SupplierID" />
+            <span asp-Validation-for="Product.SupplierID"></span>
+        </div>
+        <div>
+            <label asp-for="Product.QuantityPerLabel"></label>
+            <input asp-for="Product.QuantityPerLabel" />
+            <span asp-Validation-for="Product.QuantityPerLabel"></span>
+        </div>
+        <div>
+            <label asp-for="Product.UnitPrice"></label>
+            <input asp-for="Product.UnitPrice" />
+            <span asp-Validation-for="Product.UnitPrice"></span>
+        </div>
+        <div>
+            <label asp-for="Product.UnitsInStock"></label>
+            <input asp-for="Product.UnitsInStock" />
+            <span asp-Validation-for="Product.UnitsInStock"></span>
+        </div>
+        <div>
+            <label asp-for="Product.UnitsOnOrder"></label>
+            <input asp-for="Product.UnitsOnOrder" />
+            <span asp-Validation-for="Product.UnitsOnOrder"></span>
+        </div>
+        <div>
+            <label asp-for="Product.ReorderLevel"></label>
+            <input asp-for="Product.ReorderLevel" />
+            <span asp-Validation-for="Product.ReorderLevel"></span>
+        </div>
+        <div>
+            <label asp-for="Product.Discontinued"></label>
+            <input asp-for="Product.Discontinued" />
+            <span asp-Validation-for="Product.Discontinued"></span>
+        </div>
+        <div asp-Validation-summary="All"></div>
+        <input type="submit" value="Create Product">
+    </form>
+</div>
+
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

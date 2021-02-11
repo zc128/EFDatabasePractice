@@ -1,0 +1,41 @@
+﻿@page
+
+@using EFDatabasePractice.Models;
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    int ProdQuantity = (int)ViewData["ProdQuantity"];
+    List<Product> ProdList = (List<Product>)ViewData["ProdList"];
+     
+}
+
+
+<h1 id="title">Welcome to the Online TV Shop</h1>
+<h5 class="sub-title">There are currently @ProdQuantity different products for sale:</h5>
+<hr />
+<h5 class="sub-title">List of Products:</h5>
+<div id="Product-MainPage">
+    @foreach (var prod in ProdList)
+    {
+        <a href="/Product/@prod.ProductID">
+            <div class="product">
+                <div>Product ID: @prod.ProductID</div>
+                <div>Product Name: @prod.ProductName</div>
+                <div>Price: @prod.UnitPrice</div>
+                <div>Category: @prod.Category.Name</div>
+                <div>Description: @prod.Category.Description</div>
+            </div>
+        </a>
+    }
+</div>
+<hr />
+<footer>
+    <h4>Suppliers:</h4>
+    <div>
+        <a href="https://www.lg.com/ca_en"><img src="https://www.nicepng.com/png/detail/80-802124_in-2011-the-logo-received-a-glossy-3d.png" alt="" width="360" height="100"></a>
+        <a href="https://www.samsung.com/ca"><img src="https://p.kindpng.com/picc/s/37-370765_samsung-logo-png-transparent-png.png" alt="" width="360" height="100"></a>
+        <a href="https://www.sony.ca/en"><img src="https://miro.medium.com/max/1200/0*pkS5wTqSv5uKQT9v.jpg" alt="" width="360" height="100"></a>
+    </div>
+    <hr />
+    <p>Disclaimer:This Ecommerce website is for a school project and it's for educational purposes only.</p>
+</footer>
